@@ -79,8 +79,8 @@ const ServiceDetailPage: React.FC = () => {
 
       <Ticker items={[service.title, '20+ Lat Doświadczenia', '120+ Projektów', 'Europa']} />
 
-      <section style={{ padding:'100px 48px' }}>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'80px', alignItems:'start', marginBottom:'60px' }}>
+      <section className="page-section" style={{ padding:'100px 48px' }}>
+        <div className="detail-grid" style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'80px', alignItems:'start', marginBottom:'60px' }}>
           <div ref={leftRef} className="reveal-left">
             <SectionLabel>Zakres usług</SectionLabel>
             <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(42px,6vw,72px)', lineHeight:1, letterSpacing:'1px' }}>
@@ -104,7 +104,7 @@ const ServiceDetailPage: React.FC = () => {
         </div>
       </section>
 
-      <section style={{ padding:'80px 48px', background:'var(--surface)', borderTop:'1px solid var(--border)', textAlign:'center' }}>
+      <section className="page-section" style={{ padding:'80px 48px', background:'var(--surface)', borderTop:'1px solid var(--border)', textAlign:'center' }}>
         <SectionLabel center>Gotowi do realizacji</SectionLabel>
         <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(42px,6vw,80px)', lineHeight:1, marginBottom:'24px' }}>
           Porozmawiajmy o Twoim <span style={{ color:'var(--accent)' }}>projekcie</span>
@@ -123,12 +123,6 @@ const ServiceDetailPage: React.FC = () => {
         </div>
       </section>
 
-      <style>{`
-        @media (max-width: 900px) {
-          section { padding-left: 24px !important; padding-right: 24px !important; }
-          .detail-grid { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </>
   );
 };

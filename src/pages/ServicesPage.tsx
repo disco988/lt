@@ -15,7 +15,7 @@ const ServiceBigCard: React.FC<{ service: Service; side: 'left' | 'right'; delay
     <Link
       ref={ref}
       to={service.slug}
-      className={side === 'left' ? 'reveal-left' : 'reveal-right'}
+      className={`${side === 'left' ? 'reveal-left' : 'reveal-right'} service-big-card`}
       style={{
         background:    'var(--surface)',
         padding:       '64px',
@@ -87,8 +87,8 @@ const ServicesPage: React.FC = () => (
 
     <Ticker items={['Mechanika','Elektryka','Automatyka','Pneumatyka']} />
 
-    <section style={{ padding:'100px 48px' }}>
-      <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'2px' }}>
+    <section className="page-section" style={{ padding:'100px 48px' }}>
+      <div className="services-big-grid" style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'2px' }}>
         {SERVICES.map((s, i) => (
           <ServiceBigCard
             key={s.id}
@@ -100,7 +100,7 @@ const ServicesPage: React.FC = () => (
       </div>
     </section>
 
-    <section style={{ padding:'80px 48px', background:'var(--surface)', borderTop:'1px solid var(--border)', textAlign:'center' }}>
+    <section className="page-section" style={{ padding:'80px 48px', background:'var(--surface)', borderTop:'1px solid var(--border)', textAlign:'center' }}>
       <SectionLabel center>Kompleksowe podejście</SectionLabel>
       <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(42px,6vw,80px)', lineHeight:1, marginBottom:'24px' }}>
         Od koncepcji do <span style={{ color:'var(--accent)' }}>realizacji</span>
@@ -112,13 +112,6 @@ const ServicesPage: React.FC = () => (
       <Button to="/kontakt">Zapytaj o wycenę</Button>
     </section>
 
-    <style>{`
-      @media (max-width: 900px) {
-        section { padding-left: 24px !important; padding-right: 24px !important; }
-        .services-big-grid { grid-template-columns: 1fr !important; }
-        .service-big-card  { padding: 40px 24px !important; }
-      }
-    `}</style>
   </>
 );
 

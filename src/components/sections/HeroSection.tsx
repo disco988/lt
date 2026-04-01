@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../ui/Button';
+import { RobotArmBg } from '../ui/AutomationBg';
 
 const HeroSection: React.FC = () => {
   const numberRef = useRef<HTMLDivElement>(null);
@@ -16,7 +17,7 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <section style={{
+    <section className="hero-section" style={{
       minHeight:      '100vh',
       display:        'flex',
       flexDirection:  'column',
@@ -25,6 +26,9 @@ const HeroSection: React.FC = () => {
       position:       'relative',
       overflow:       'hidden',
     }}>
+      {/* Robot arm decoration */}
+      <RobotArmBg style={{ left: '-2%', top: '8%', height: '82%', width: 'auto' }} />
+
       {/* Background glow */}
       <div style={{
         position: 'absolute', inset: 0,
@@ -145,7 +149,7 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div style={{
+      <div className="scroll-indicator" style={{
         position:       'absolute',
         bottom:         '80px',
         right:          '48px',
@@ -168,11 +172,6 @@ const HeroSection: React.FC = () => {
         }} />
       </div>
 
-      <style>{`
-        @media (max-width: 900px) {
-          section > div:last-of-type { display: none; }
-        }
-      `}</style>
     </section>
   );
 };

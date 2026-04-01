@@ -11,7 +11,7 @@ import type { Value, TimelineEntry } from '../types';
 const TimelineItem: React.FC<{ entry: TimelineEntry; delay: number }> = ({ entry, delay }) => {
   const ref = useScrollReveal<HTMLDivElement>();
   return (
-    <div ref={ref} className="reveal" style={{
+    <div ref={ref} className="reveal tl-item" style={{
       display:             'grid',
       gridTemplateColumns: '120px 1fr',
       gap:                 '40px',
@@ -85,8 +85,8 @@ const AboutPage: React.FC = () => {
       <Ticker items={['20+ Lat','120+ Projektów','85 Pracowników','13 Krajów']} />
 
       {/* Mission */}
-      <section style={{ padding:'100px 48px' }}>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'80px', alignItems:'start' }}>
+      <section className="page-section" style={{ padding:'100px 48px' }}>
+        <div className="two-col-grid" style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:'80px', alignItems:'start' }}>
           <div ref={missionLeftRef} className="reveal-left">
             <SectionLabel>Misja i wizja</SectionLabel>
             <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(42px,6vw,72px)', lineHeight:1, letterSpacing:'1px' }}>
@@ -108,7 +108,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Timeline */}
-      <section style={{ padding:'100px 48px', background:'var(--surface)', borderTop:'1px solid var(--border)', borderBottom:'1px solid var(--border)' }}>
+      <section className="page-section" style={{ padding:'100px 48px', background:'var(--surface)', borderTop:'1px solid var(--border)', borderBottom:'1px solid var(--border)' }}>
         <div ref={tlLabelRef} className="reveal"><SectionLabel>Historia</SectionLabel></div>
         <h2 ref={tlTitleRef} className="reveal" style={{
           fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(42px,6vw,80px)',
@@ -124,7 +124,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Values */}
-      <section style={{ padding:'100px 48px' }}>
+      <section className="page-section" style={{ padding:'100px 48px' }}>
         <div ref={valLabelRef} className="reveal"><SectionLabel>Nasze wartości</SectionLabel></div>
         <h2 ref={valTitleRef} className="reveal" style={{
           fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(42px,6vw,80px)',
@@ -132,13 +132,13 @@ const AboutPage: React.FC = () => {
         }}>
           Co nas <span style={{ color:'var(--accent)' }}>wyróżnia</span>
         </h2>
-        <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'2px' }}>
+        <div className="values-grid" style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'2px' }}>
           {VALUES.map((v, i) => <ValueCard key={v.title} value={v} delay={i * 0.08} />)}
         </div>
       </section>
 
       {/* CTA */}
-      <section style={{ padding:'100px 48px', background:'var(--surface)', borderTop:'1px solid var(--border)', textAlign:'center' }}>
+      <section className="page-section" style={{ padding:'100px 48px', background:'var(--surface)', borderTop:'1px solid var(--border)', textAlign:'center' }}>
         <SectionLabel center>Dołącz do nas</SectionLabel>
         <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(42px,6vw,80px)', lineHeight:1, marginBottom:'24px' }}>
           Zacznijmy <span style={{ color:'var(--accent)' }}>współpracę</span>
@@ -151,13 +151,7 @@ const AboutPage: React.FC = () => {
 
       <style>{`
         @media (max-width: 900px) {
-          section { padding-left: 24px !important; padding-right: 24px !important; }
-          .two-col-about { grid-template-columns: 1fr !important; }
-          .values-grid   { grid-template-columns: 1fr 1fr !important; }
-          .tl-item       { grid-template-columns: 80px 1fr !important; gap: 20px !important; }
-        }
-        @media (max-width: 600px) {
-          .values-grid { grid-template-columns: 1fr !important; }
+          .tl-item { grid-template-columns: 80px 1fr !important; gap: 20px !important; }
         }
       `}</style>
     </>

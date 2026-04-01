@@ -3,6 +3,7 @@ import SectionLabel from '../ui/SectionLabel';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { FAQ_ITEMS } from '../../data';
 import type { FaqItem } from '../../types';
+import { PipeSchematicBg } from '../ui/AutomationBg';
 
 interface FaqRowProps {
   item: FaqItem;
@@ -89,10 +90,13 @@ const FaqSection: React.FC = () => {
   const right = FAQ_ITEMS.slice(half);
 
   return (
-    <section style={{
-      padding:   '120px 48px',
-      borderTop: '1px solid var(--border)',
+    <section className="faq-section" style={{
+      padding:  '120px 48px',
+      borderTop:'1px solid var(--border)',
+      position: 'relative',
+      overflow: 'hidden',
     }}>
+      <PipeSchematicBg style={{ right: '-4%', bottom: '-8%', height: '90%', width: 'auto' }} />
       <div ref={labelRef} className="reveal">
         <SectionLabel>Pytania i odpowiedzi</SectionLabel>
       </div>
@@ -110,7 +114,7 @@ const FaqSection: React.FC = () => {
         Najczęstsze <span style={{ color: 'var(--accent)' }}>pytania</span>
       </h2>
 
-      <div style={{
+      <div className="faq-grid" style={{
         display:             'grid',
         gridTemplateColumns: '1fr 1fr',
         gap:                 '80px',
@@ -140,11 +144,6 @@ const FaqSection: React.FC = () => {
         </div>
       </div>
 
-      <style>{`
-        @media (max-width: 900px) {
-          .faq-grid { grid-template-columns: 1fr !important; gap: 0 !important; margin-top: 40px !important; }
-        }
-      `}</style>
     </section>
   );
 };

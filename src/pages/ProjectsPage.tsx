@@ -118,7 +118,7 @@ const ProjectsPage: React.FC = () => {
         description="Każdy projekt to dowód naszego zaangażowania i dbałości o najwyższą jakość. Realizujemy zlecenia dla największych firm przemysłowych w Europie."
       />
 
-      <section style={{ padding:'100px 48px' }}>
+      <section className="page-section" style={{ padding:'100px 48px' }}>
         {/* Filters */}
         <div style={{ display:'flex', gap:'2px', marginBottom:'40px', flexWrap:'wrap' }}>
           {FILTERS.map(f => (
@@ -145,14 +145,14 @@ const ProjectsPage: React.FC = () => {
         </div>
 
         {/* Grid */}
-        <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'2px' }}>
+        <div className="projects-grid" style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'2px' }}>
           {filtered.map((p, i) => (
             <ProjectCard key={p.id} project={p} delay={i * 0.05} />
           ))}
         </div>
       </section>
 
-      <section style={{ padding:'80px 48px', background:'var(--surface)', borderTop:'1px solid var(--border)', textAlign:'center' }}>
+      <section className="page-section" style={{ padding:'80px 48px', background:'var(--surface)', borderTop:'1px solid var(--border)', textAlign:'center' }}>
         <SectionLabel center>Twój projekt</SectionLabel>
         <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(42px,6vw,80px)', lineHeight:1, marginBottom:'24px' }}>
           Zrealizujemy Twój <span style={{ color:'var(--accent)' }}>projekt</span>
@@ -160,15 +160,6 @@ const ProjectsPage: React.FC = () => {
         <Button to="/kontakt">Skontaktuj się z nami</Button>
       </section>
 
-      <style>{`
-        @media (max-width: 900px) {
-          section { padding-left: 24px !important; padding-right: 24px !important; }
-          .projects-grid { grid-template-columns: 1fr 1fr !important; }
-        }
-        @media (max-width: 600px) {
-          .projects-grid { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </>
   );
 };

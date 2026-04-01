@@ -4,6 +4,7 @@ import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { useCounter } from '../../hooks/useCounter';
 import { STATS } from '../../data';
 import type { Stat } from '../../types';
+import { CircuitBg } from '../ui/AutomationBg';
 
 /* ── Single stat card – own component so every hook call is stable ── */
 const StatCard: React.FC<{ stat: Stat; delay: number }> = ({ stat, delay }) => {
@@ -84,7 +85,8 @@ const StatsSection: React.FC = () => {
   const headerRef = useScrollReveal<HTMLDivElement>();
 
   return (
-    <section style={{ padding:'120px 48px' }}>
+    <section className="stats-section" style={{ padding:'120px 48px', position:'relative', overflow:'hidden' }}>
+      <CircuitBg style={{ top: 0, left: 0, width: '100%', height: '100%' }} />
       <div
         ref={headerRef}
         className="reveal"
@@ -111,7 +113,7 @@ const StatsSection: React.FC = () => {
         </p>
       </div>
 
-      <div style={{
+      <div className="stats-grid" style={{
         display:             'grid',
         gridTemplateColumns: 'repeat(4,1fr)',
         gap:                 '1px',
@@ -122,15 +124,6 @@ const StatsSection: React.FC = () => {
         ))}
       </div>
 
-      <style>{`
-        @media (max-width: 900px) {
-          .stats-section { padding: 80px 24px !important; }
-          .stats-section > div:last-child { grid-template-columns: 1fr 1fr !important; }
-        }
-        @media (max-width: 500px) {
-          .stats-section > div:last-child { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </section>
   );
 };

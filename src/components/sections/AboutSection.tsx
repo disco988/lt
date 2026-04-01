@@ -2,6 +2,7 @@ import React from 'react';
 import SectionLabel from '../ui/SectionLabel';
 import Button from '../ui/Button';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { GearsBg } from '../ui/AutomationBg';
 
 const CHECK_ITEMS = [
   'Indywidualne podejście do klienta',
@@ -16,7 +17,7 @@ const AboutSection: React.FC = () => {
   const rightRef = useScrollReveal<HTMLDivElement>();
 
   return (
-    <section style={{
+    <section className="about-section" style={{
       padding:      '120px 48px',
       background:   'var(--surface)',
       borderTop:    '1px solid var(--border)',
@@ -24,6 +25,9 @@ const AboutSection: React.FC = () => {
       position:     'relative',
       overflow:     'hidden',
     }}>
+      {/* Gears decoration */}
+      <GearsBg style={{ left: '-4%', bottom: '-5%', height: '85%', width: 'auto' }} />
+
       {/* Glow */}
       <div style={{
         position:     'absolute',
@@ -36,7 +40,7 @@ const AboutSection: React.FC = () => {
         pointerEvents:'none',
       }} />
 
-      <div style={{
+      <div className="about-grid" style={{
         display:             'grid',
         gridTemplateColumns: '1fr 1fr',
         gap:                 '120px',
@@ -144,11 +148,6 @@ const AboutSection: React.FC = () => {
         </div>
       </div>
 
-      <style>{`
-        @media (max-width: 900px) {
-          .about-grid { grid-template-columns: 1fr !important; gap: 60px !important; padding: 80px 24px !important; }
-        }
-      `}</style>
     </section>
   );
 };

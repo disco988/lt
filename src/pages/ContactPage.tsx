@@ -46,8 +46,8 @@ const ContactPage: React.FC = () => {
         description="Jesteśmy gotowi wysłuchać Twojego projektu. Skontaktuj się z nami — odpowiemy w ciągu 24 godzin."
       />
 
-      <section style={{ padding:'100px 48px' }}>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1.4fr', gap:'80px' }}>
+      <section className="page-section" style={{ padding:'100px 48px' }}>
+        <div className="contact-page-grid" style={{ display:'grid', gridTemplateColumns:'1fr 1.4fr', gap:'80px' }}>
           {/* Left */}
           <div ref={leftRef} className="reveal-left">
             <SectionLabel>Dane kontaktowe</SectionLabel>
@@ -149,12 +149,6 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
 
-      <style>{`
-        @media (max-width: 900px) {
-          section { padding-left: 24px !important; padding-right: 24px !important; }
-          .contact-page-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
-        }
-      `}</style>
     </>
   );
 };

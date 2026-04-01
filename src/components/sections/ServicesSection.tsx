@@ -5,6 +5,7 @@ import Button       from '../ui/Button';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { SERVICES } from '../../data';
 import type { Service } from '../../types';
+import { ConveyorBg } from '../ui/AutomationBg';
 
 /* ── Arrow icon ── */
 const Arrow: React.FC = () => (
@@ -43,6 +44,7 @@ const ServiceRow: React.FC<{ service: Service; delay: number }> = ({ service, de
     <div ref={wrapRef} className="reveal" style={{ transitionDelay:`${delay}s` }}>
       <Link
         to={service.slug}
+        className="service-row"
         style={{
           display:             'grid',
           gridTemplateColumns: '80px 1fr auto',
@@ -102,9 +104,10 @@ const ServicesSection: React.FC = () => {
   const rightRef = useScrollReveal<HTMLDivElement>();
 
   return (
-    <section style={{ padding:'0 48px 120px' }}>
+    <section className="services-section" style={{ padding:'0 48px 120px', position:'relative', overflow:'hidden' }}>
+      <ConveyorBg style={{ bottom: 0, left: 0, width: '100%', height: 'auto' }} />
       {/* Intro */}
-      <div style={{
+      <div className="services-intro" style={{
         display:'grid', gridTemplateColumns:'1fr 1fr', gap:'80px',
         marginBottom:'80px', alignItems:'flex-end',
       }}>
@@ -137,11 +140,6 @@ const ServicesSection: React.FC = () => {
         ))}
       </div>
 
-      <style>{`
-        @media (max-width: 900px) {
-          .services-section { padding-left: 24px !important; padding-right: 24px !important; }
-        }
-      `}</style>
     </section>
   );
 };

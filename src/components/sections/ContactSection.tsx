@@ -50,7 +50,7 @@ const ContactSection: React.FC = () => {
   const rightRef = useScrollReveal<HTMLDivElement>();
 
   return (
-    <section style={{
+    <section className="contact-section" style={{
       padding:   '120px 48px',
       background:'var(--surface)',
       borderTop: '1px solid var(--border)',
@@ -73,7 +73,7 @@ const ContactSection: React.FC = () => {
         KONTAKT
       </div>
 
-      <div style={{
+      <div className="contact-grid" style={{
         display:             'grid',
         gridTemplateColumns: '1fr 1fr',
         gap:                 '80px',
@@ -124,11 +124,6 @@ const ContactSection: React.FC = () => {
         </div>
       </div>
 
-      <style>{`
-        @media (max-width: 900px) {
-          .contact-grid { grid-template-columns: 1fr !important; padding: 80px 24px !important; }
-        }
-      `}</style>
     </section>
   );
 };
