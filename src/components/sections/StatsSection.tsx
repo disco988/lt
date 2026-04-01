@@ -1,0 +1,138 @@
+import React from 'react';
+import SectionLabel from '../ui/SectionLabel';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { useCounter } from '../../hooks/useCounter';
+import { STATS } from '../../data';
+import type { Stat } from '../../types';
+
+/* ── Single stat card – own component so every hook call is stable ── */
+const StatCard: React.FC<{ stat: Stat; delay: number }> = ({ stat, delay }) => {
+  const wrapRef = useScrollReveal<HTMLDivElement>();
+  const [count, numRef] = useCounter(stat.value);
+
+  return (
+    <div
+      ref={wrapRef}
+      className="reveal"
+      style={{ transitionDelay: `${delay}s` }}
+    >
+      <div
+        style={{
+          background: 'var(--bg)',
+          padding:    '48px 40px',
+          position:   'relative',
+          overflow:   'hidden',
+          transition: 'background 0.3s',
+          height:     '100%',
+        }}
+        onMouseEnter={e => {
+          (e.currentTarget as HTMLDivElement).style.background = 'var(--surface)';
+          const line = (e.currentTarget as HTMLDivElement).querySelector<HTMLDivElement>('.accent-line');
+          if (line) line.style.transform = 'scaleX(1)';
+        }}
+        onMouseLeave={e => {
+          (e.currentTarget as HTMLDivElement).style.background = 'var(--bg)';
+          const line = (e.currentTarget as HTMLDivElement).querySelector<HTMLDivElement>('.accent-line');
+          if (line) line.style.transform = 'scaleX(0)';
+        }}
+      >
+        {/* bottom accent bar */}
+        <div className="accent-line" style={{
+          position:        'absolute',
+          bottom:0, left:0, right:0,
+          height:          '2px',
+          background:      'var(--accent)',
+          transform:       'scaleX(0)',
+          transformOrigin: 'left',
+          transition:      'transform 0.4s cubic-bezier(.16,1,.3,1)',
+        }} />
+
+        <div style={{
+          fontFamily: "'Bebas Neue', sans-serif",
+          fontSize:   'clamp(64px, 7vw, 100px)',
+          lineHeight: 1,
+          color:      'var(--text)',
+        }}>
+          <span ref={numRef} style={{
+            display:   'inline-block',
+            opacity:    0,
+            transform: 'translateY(20px)',
+            transition:'opacity 0.6s, transform 0.6s',
+          }}>
+            {count}
+          </span>
+          <span style={{ color:'var(--accent)' }}>{stat.suffix}</span>
+        </div>
+
+        <p style={{
+          fontSize:      '13px',
+          color:         'var(--muted)',
+          letterSpacing: '1px',
+          marginTop:     '12px',
+          textTransform: 'uppercase',
+          fontWeight:    600,
+        }}>
+          {stat.label}
+        </p>
+      </div>
+    </div>
+  );
+};
+
+/* ── Section ── */
+const StatsSection: React.FC = () => {
+  const headerRef = useScrollReveal<HTMLDivElement>();
+
+  return (
+    <section style={{ padding:'120px 48px' }}>
+      <div
+        ref={headerRef}
+        className="reveal"
+        style={{
+          display:       'flex',
+          justifyContent:'space-between',
+          alignItems:    'flex-end',
+          marginBottom:  '80px',
+          borderBottom:  '1px solid var(--border)',
+          paddingBottom: '48px',
+          flexWrap:      'wrap',
+          gap:           '32px',
+        }}
+      >
+        <div>
+          <SectionLabel>W liczbach</SectionLabel>
+          <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(42px,6vw,80px)', lineHeight:1 }}>
+            Wyniki mówią<br />same za siebie
+          </h2>
+        </div>
+        <p style={{ maxWidth:'360px', color:'var(--muted)', fontSize:'15px', lineHeight:1.7 }}>
+          Od pomysłu do realizacji — każdy projekt to dowód naszego zaangażowania
+          i dbałości o najwyższą jakość.
+        </p>
+      </div>
+
+      <div style={{
+        display:             'grid',
+        gridTemplateColumns: 'repeat(4,1fr)',
+        gap:                 '1px',
+        background:          'var(--border)',
+      }}>
+        {STATS.map((stat, i) => (
+          <StatCard key={stat.label} stat={stat} delay={i * 0.1} />
+        ))}
+      </div>
+
+      <style>{`
+        @media (max-width: 900px) {
+          .stats-section { padding: 80px 24px !important; }
+          .stats-section > div:last-child { grid-template-columns: 1fr 1fr !important; }
+        }
+        @media (max-width: 500px) {
+          .stats-section > div:last-child { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
+    </section>
+  );
+};
+
+export default StatsSection;
