@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Button from '../ui/Button';
-import { RobotArmBg } from '../ui/AutomationBg';
 
 const HeroSection: React.FC = () => {
   const numberRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const onScroll = () => {
@@ -26,8 +27,24 @@ const HeroSection: React.FC = () => {
       position:       'relative',
       overflow:       'hidden',
     }}>
-      {/* Robot arm decoration */}
-      <RobotArmBg style={{ left: '-2%', top: '8%', height: '82%', width: 'auto' }} />
+      {/* Video background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{
+          position:   'absolute',
+          inset:      0,
+          width:      '100%',
+          height:     '100%',
+          objectFit:  'cover',
+          opacity:    0.22,
+          pointerEvents: 'none',
+        }}
+      >
+        <source src="/hero-video.mp4" type="video/mp4" />
+      </video>
 
       {/* Background glow */}
       <div style={{
@@ -87,7 +104,7 @@ const HeroSection: React.FC = () => {
           background: 'var(--accent)',
           animation:  'blink 2s infinite',
         }} />
-        Automatyzacja Przemysłowa — Pyskowice
+        {t('hero.badge')}
       </div>
 
       {/* Title */}
@@ -100,16 +117,15 @@ const HeroSection: React.FC = () => {
         position:      'relative',
         zIndex:        1,
       }}>
-        {['Zautomatyzujemy', 'Twoją Firmę.', 'Kompleksowo.'].map((line, i) => (
+        {[t('hero.line1'), 'LINE2', t('hero.line3')].map((line, i) => (
           <span key={i} style={{ overflow: 'hidden', display: 'block' }}>
             <span style={{
-              display:         'block',
-              transform:       'translateY(110%)',
-              animation:       `slideUp 1s cubic-bezier(.16,1,.3,1) ${0.1 + i * 0.1}s forwards`,
-              color:           i === 1 ? undefined : undefined,
+              display:   'block',
+              transform: 'translateY(110%)',
+              animation: `slideUp 1s cubic-bezier(.16,1,.3,1) ${0.1 + i * 0.1}s forwards`,
             }}>
               {i === 1 ? (
-                <>Twoją <span style={{ color: 'var(--accent)' }}>Firmę.</span></>
+                <>{t('hero.line2_pre')} <span style={{ color: 'var(--accent)' }}>{t('hero.line2_accent')}</span></>
               ) : line}
             </span>
           </span>
@@ -133,14 +149,13 @@ const HeroSection: React.FC = () => {
           lineHeight: 1.7,
           fontWeight: 400,
         }}>
-          Projektowanie, budowa i automatyzacja maszyn oraz linii produkcyjnych.
-          Kompleksowe rozwiązania — od koncepcji po gotowe urządzenie.
+          {t('hero.description')}
         </p>
 
         <div style={{ display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap' }}>
-          <Button to="/uslugi">Nasze Usługi</Button>
+          <Button to="/uslugi">{t('hero.btn_services')}</Button>
           <Button to="/kontakt" variant="secondary">
-            Kontakt
+            {t('hero.btn_contact')}
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>

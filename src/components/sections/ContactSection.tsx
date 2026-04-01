@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import SectionLabel from '../ui/SectionLabel';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 
@@ -78,6 +79,7 @@ const ContactCard: React.FC<ContactCardProps> = ({ icon, label, value, delay }) 
 
 const ContactSection: React.FC = () => {
   const headerRef = useScrollReveal<HTMLDivElement>();
+  const { t } = useTranslation();
 
   return (
     <section className="contact-section" style={{
@@ -121,20 +123,19 @@ const ContactSection: React.FC = () => {
         }}
       >
         <div>
-          <SectionLabel>Kontakt</SectionLabel>
+          <SectionLabel>{t('contact_section.label')}</SectionLabel>
           <h2 style={{
             fontFamily:    "'Bebas Neue', sans-serif",
             fontSize:      'clamp(42px, 6vw, 80px)',
             lineHeight:    1,
             letterSpacing: '1px',
           }}>
-            Skontaktuj się<br />
-            <span style={{ color: 'var(--accent)' }}>z nami.</span>
+            {t('contact_section.title')}<br />
+            <span style={{ color: 'var(--accent)' }}>{t('contact_section.title_accent')}</span>
           </h2>
         </div>
         <p style={{ maxWidth:'360px', color:'var(--muted)', fontSize:'15px', lineHeight:1.7 }}>
-          Odpowiadamy w ciągu 24 godzin. Możesz również odwiedzić nas bezpośrednio
-          w naszej siedzibie w Pyskowicach.
+          {t('contact_section.description')}
         </p>
       </div>
 
@@ -148,7 +149,7 @@ const ContactSection: React.FC = () => {
       }}>
         <ContactCard
           delay={0}
-          label="Telefon"
+          label={t('contact_section.phone_label')}
           icon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="2" strokeLinecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81a19.79 19.79 0 01-3.07-8.66A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>}
           value={
             <a href="tel:+48326664450" style={{ color:'inherit', textDecoration:'none', transition:'color 0.2s' }}
@@ -161,7 +162,7 @@ const ContactSection: React.FC = () => {
         />
         <ContactCard
           delay={0.1}
-          label="Email"
+          label={t('contact_section.email_label')}
           icon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>}
           value={
             <a href="mailto:info@lubotech.pl" style={{ color:'inherit', textDecoration:'none', transition:'color 0.2s' }}
@@ -174,7 +175,7 @@ const ContactSection: React.FC = () => {
         />
         <ContactCard
           delay={0.2}
-          label="Adres"
+          label={t('contact_section.address_label')}
           icon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>}
           value={<>ul. Poznańska 15,<br />44-120 Pyskowice</>}
         />

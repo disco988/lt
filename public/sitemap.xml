@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Polish (default) -->
+  <url>
+    <loc>https://lubotech.pl/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://lubotech.pl/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lubotech.pl/en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lubotech.pl/de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lubotech.pl/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://lubotech.pl/o-nas</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://lubotech.pl/o-nas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lubotech.pl/en/o-nas"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lubotech.pl/de/o-nas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lubotech.pl/o-nas"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lubotech.pl/uslugi</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://lubotech.pl/uslugi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lubotech.pl/en/uslugi"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lubotech.pl/de/uslugi"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lubotech.pl/uslugi"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lubotech.pl/uslugi/mechanika</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://lubotech.pl/uslugi/mechanika"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lubotech.pl/en/uslugi/mechanika"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lubotech.pl/de/uslugi/mechanika"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lubotech.pl/uslugi/mechanika"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lubotech.pl/uslugi/elektryka</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://lubotech.pl/uslugi/elektryka"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lubotech.pl/en/uslugi/elektryka"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lubotech.pl/de/uslugi/elektryka"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lubotech.pl/uslugi/elektryka"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lubotech.pl/uslugi/automatyka</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://lubotech.pl/uslugi/automatyka"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lubotech.pl/en/uslugi/automatyka"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lubotech.pl/de/uslugi/automatyka"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lubotech.pl/uslugi/automatyka"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lubotech.pl/uslugi/pneumatyka</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://lubotech.pl/uslugi/pneumatyka"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lubotech.pl/en/uslugi/pneumatyka"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lubotech.pl/de/uslugi/pneumatyka"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lubotech.pl/uslugi/pneumatyka"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lubotech.pl/realizacje</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://lubotech.pl/realizacje"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lubotech.pl/en/realizacje"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lubotech.pl/de/realizacje"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lubotech.pl/realizacje"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lubotech.pl/kontakt</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://lubotech.pl/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lubotech.pl/en/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lubotech.pl/de/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lubotech.pl/kontakt"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- English -->
+  <url>
+    <loc>https://lubotech.pl/en</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://lubotech.pl/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lubotech.pl/en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lubotech.pl/de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lubotech.pl/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lubotech.pl/en/o-nas</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://lubotech.pl/o-nas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lubotech.pl/en/o-nas"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lubotech.pl/de/o-nas"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lubotech.pl/en/uslugi</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://lubotech.pl/uslugi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lubotech.pl/en/uslugi"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lubotech.pl/de/uslugi"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lubotech.pl/en/realizacje</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://lubotech.pl/realizacje"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lubotech.pl/en/realizacje"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lubotech.pl/de/realizacje"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lubotech.pl/en/kontakt</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://lubotech.pl/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lubotech.pl/en/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lubotech.pl/de/kontakt"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- German -->
+  <url>
+    <loc>https://lubotech.pl/de</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://lubotech.pl/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lubotech.pl/en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lubotech.pl/de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lubotech.pl/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lubotech.pl/de/o-nas</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://lubotech.pl/o-nas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lubotech.pl/en/o-nas"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lubotech.pl/de/o-nas"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lubotech.pl/de/uslugi</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://lubotech.pl/uslugi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lubotech.pl/en/uslugi"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lubotech.pl/de/uslugi"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lubotech.pl/de/realizacje</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://lubotech.pl/realizacje"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lubotech.pl/en/realizacje"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lubotech.pl/de/realizacje"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lubotech.pl/de/kontakt</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://lubotech.pl/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lubotech.pl/en/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://lubotech.pl/de/kontakt"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import SectionLabel from '../ui/SectionLabel';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { useCounter } from '../../hooks/useCounter';
@@ -6,17 +7,14 @@ import { STATS } from '../../data';
 import type { Stat } from '../../types';
 import { CircuitBg } from '../ui/AutomationBg';
 
-/* ── Single stat card – own component so every hook call is stable ── */
-const StatCard: React.FC<{ stat: Stat; delay: number }> = ({ stat, delay }) => {
+interface StatCardProps { stat: Stat; label: string; delay: number }
+
+const StatCard: React.FC<StatCardProps> = ({ stat, label, delay }) => {
   const wrapRef = useScrollReveal<HTMLDivElement>();
   const [count, numRef] = useCounter(stat.value);
 
   return (
-    <div
-      ref={wrapRef}
-      className="reveal"
-      style={{ transitionDelay: `${delay}s` }}
-    >
+    <div ref={wrapRef} className="reveal" style={{ transitionDelay: `${delay}s` }}>
       <div
         style={{
           background: 'var(--bg)',
@@ -37,7 +35,6 @@ const StatCard: React.FC<{ stat: Stat; delay: number }> = ({ stat, delay }) => {
           if (line) line.style.transform = 'scaleX(0)';
         }}
       >
-        {/* bottom accent bar */}
         <div className="accent-line" style={{
           position:        'absolute',
           bottom:0, left:0, right:0,
@@ -73,16 +70,17 @@ const StatCard: React.FC<{ stat: Stat; delay: number }> = ({ stat, delay }) => {
           textTransform: 'uppercase',
           fontWeight:    600,
         }}>
-          {stat.label}
+          {label}
         </p>
       </div>
     </div>
   );
 };
 
-/* ── Section ── */
 const StatsSection: React.FC = () => {
   const headerRef = useScrollReveal<HTMLDivElement>();
+  const { t } = useTranslation();
+  const labels = t('stats.labels', { returnObjects: true }) as string[];
 
   return (
     <section className="stats-section" style={{ padding:'120px 48px', position:'relative', overflow:'hidden' }}>
@@ -102,14 +100,13 @@ const StatsSection: React.FC = () => {
         }}
       >
         <div>
-          <SectionLabel>W liczbach</SectionLabel>
+          <SectionLabel>{t('stats.label')}</SectionLabel>
           <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(42px,6vw,80px)', lineHeight:1 }}>
-            Wyniki mówią<br />same za siebie
+            {t('stats.title_pre')}<br /><span style={{ color:'var(--accent)' }}>{t('stats.title_accent')}</span>
           </h2>
         </div>
         <p style={{ maxWidth:'360px', color:'var(--muted)', fontSize:'15px', lineHeight:1.7 }}>
-          Od pomysłu do realizacji — każdy projekt to dowód naszego zaangażowania
-          i dbałości o najwyższą jakość.
+          {t('stats.description')}
         </p>
       </div>
 
@@ -120,7 +117,7 @@ const StatsSection: React.FC = () => {
         background:          'var(--border)',
       }}>
         {STATS.map((stat, i) => (
-          <StatCard key={stat.label} stat={stat} delay={i * 0.1} />
+          <StatCard key={stat.label} stat={stat} label={labels[i] || stat.label} delay={i * 0.1} />
         ))}
       </div>
 

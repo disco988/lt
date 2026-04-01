@@ -1,0 +1,280 @@
+{
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact",
+    "cta": "Request a Quote"
+  },
+  "hero": {
+    "badge": "Industrial Automation — Pyskowice, Poland",
+    "line1": "We Automate",
+    "line2_pre": "Your",
+    "line2_accent": "Company.",
+    "line3": "Completely.",
+    "description": "Design, construction and automation of machines and production lines. Complete solutions — from concept to finished product.",
+    "btn_services": "Our Services",
+    "btn_contact": "Contact"
+  },
+  "stats": {
+    "label": "By the numbers",
+    "title_pre": "Results speak",
+    "title_accent": "for themselves",
+    "description": "From idea to delivery — every project is proof of our commitment and dedication to the highest quality.",
+    "labels": ["Completed projects", "Years of experience", "Employed engineers", "Countries served"]
+  },
+  "about_section": {
+    "label": "About us",
+    "title_pre": "Your production.",
+    "title_middle": "Our",
+    "title_accent": "engineering.",
+    "p1": "Lubotech is a company specialising in designing, building and automating machines and production lines.",
+    "p2": "We offer comprehensive solutions supporting companies in modernising and optimising their production processes across Europe.",
+    "badge": "20+ YEARS OF EXPERIENCE",
+    "check_items": [
+      "Individual approach to every client",
+      "Cost and efficiency optimisation",
+      "On-time project delivery",
+      "Latest technologies",
+      "High quality and precision"
+    ],
+    "cta": "Learn more about us"
+  },
+  "services_section": {
+    "label": "What we do",
+    "title": "Complete",
+    "title2": "industrial",
+    "title_accent": "solutions",
+    "description": "We specialise in designing, building and automating machines and production lines. We support companies in modernising and optimising their processes.",
+    "cta": "Let's talk about your project"
+  },
+  "services": {
+    "mechanika": {
+      "title": "Mechanics",
+      "subtitle": "Machine Design, Assembly & Relocation",
+      "description": "We specialise in designing and building special machines, assembling and relocating production lines, and providing mechanical service for industry.",
+      "items": [
+        "Design and construction of special machines",
+        "Assembly and relocation of production lines",
+        "Modernisation of existing workstations",
+        "Mechanical service and repairs",
+        "Technical documentation and 3D drawings"
+      ]
+    },
+    "elektryka": {
+      "title": "Electrics",
+      "subtitle": "Installations, Control Cabinets, Measurements, EPLAN",
+      "description": "Comprehensive electrical services for industry — from designing control cabinets, through installations, to measurements and EPLAN documentation.",
+      "items": [
+        "Design and construction of control cabinets",
+        "Industrial electrical installations",
+        "Measurements and installation certification",
+        "EPLAN Electric P8 documentation",
+        "CE machine certification support"
+      ]
+    },
+    "automatyka": {
+      "title": "Automation",
+      "subtitle": "Programming & Process Automation",
+      "description": "We automate and optimise production processes — from PLC controller programming, through robotisation, to SCADA systems and Industry 4.0 solutions.",
+      "items": [
+        "PLC controller programming (Siemens, Beckhoff)",
+        "Workstation robotisation (FANUC, ABB, KUKA)",
+        "SCADA and HMI systems",
+        "Vision systems and quality control",
+        "Industry 4.0 system integration"
+      ]
+    },
+    "pneumatyka": {
+      "title": "Pneumatics",
+      "subtitle": "System Design & Optimisation",
+      "description": "We design, assemble and optimise pneumatic systems for machines and production lines. We work with all leading component suppliers.",
+      "items": [
+        "Pneumatic system design",
+        "Component assembly and wiring",
+        "Compressed air consumption optimisation",
+        "System diagnostics and service",
+        "Component selection: Festo, SMC, Bosch Rexroth"
+      ]
+    }
+  },
+  "faq_section": {
+    "label": "Questions & answers",
+    "title_pre": "Frequently asked",
+    "title_accent": "questions"
+  },
+  "faq": [
+    {
+      "question": "Do you design custom special machines?",
+      "answer": "Yes. We create special machines and robotic workstations tailored to individual production process requirements. We design from scratch — from concept to finished product."
+    },
+    {
+      "question": "Do you provide service and technical support?",
+      "answer": "We provide warranty and post-warranty service, inspections, modernisations and remote support. We ensure production line continuity and quick response to customer needs."
+    },
+    {
+      "question": "Do you handle production line relocation?",
+      "answer": "Yes. We offer comprehensive production line relocation — dismantling, transport, reassembly, system integration and commissioning at the new location."
+    },
+    {
+      "question": "Do you modernise existing production lines?",
+      "answer": "We offer modernisations and optimisations of production lines, including controller replacement, robot integration, workstation rebuilding, efficiency improvement and safety enhancement."
+    },
+    {
+      "question": "Do you perform electrical installation measurements?",
+      "answer": "Yes. We perform professional electrical measurements of installations, machines and production lines in accordance with applicable standards. We provide full documentation with measurement results and recommendations."
+    },
+    {
+      "question": "How many countries do you serve?",
+      "answer": "We have provided services in 13 European countries. We carry out projects in Poland and abroad — in Germany, Czech Republic, Slovakia and other European countries."
+    }
+  ],
+  "contact_section": {
+    "label": "Contact",
+    "title": "Get in",
+    "title_accent": "touch.",
+    "description": "We respond within 24 hours. You can also visit us directly at our headquarters in Pyskowice.",
+    "phone_label": "Phone",
+    "email_label": "Email",
+    "address_label": "Address"
+  },
+  "footer": {
+    "privacy": "Privacy Policy",
+    "address": "ul. Poznańska 15, 44-120 Pyskowice"
+  },
+  "pages": {
+    "about": {
+      "hero_label": "About the company",
+      "hero_title_pre": "Your production.",
+      "hero_title_accent": "Our engineering.",
+      "hero_description": "Lubotech is a company with over 20 years of experience in designing, building and automating machines and production lines. We operate in Poland and 13 European countries.",
+      "ticker": ["20+ Years", "120+ Projects", "85 Employees", "13 Countries"],
+      "mission_label": "Mission & vision",
+      "mission_title": "Committed to",
+      "mission_title_accent": "excellence",
+      "mission_p1": "Lubotech's mission is to deliver innovative engineering solutions that increase the efficiency and competitiveness of our clients. We carry out projects comprehensively — from concept to implementation and service.",
+      "mission_p2": "Our vision is to be a leader in industrial automation in Poland and Central Europe, growing with our clients and implementing the latest Industry 4.0 technologies.",
+      "timeline_label": "History",
+      "timeline_title": "Over",
+      "timeline_title_accent": "20 years",
+      "timeline_title_post": "in the market",
+      "values_label": "Our values",
+      "values_title": "What sets",
+      "values_title_accent": "us apart",
+      "cta_label": "Work with us",
+      "cta_title": "Let's start",
+      "cta_title_accent": "working together",
+      "cta_description": "Contact us and tell us about your project. We will prepare a personalised offer.",
+      "cta_button": "Contact us"
+    },
+    "services": {
+      "hero_label": "Services",
+      "hero_title_pre": "Complete",
+      "hero_title_mid": "engineering",
+      "hero_title_accent": "offer",
+      "hero_description": "Four key departments — mechanics, electrics, automation and pneumatics — create a comprehensive solution for your production facility.",
+      "ticker": ["Mechanics", "Electrics", "Automation", "Pneumatics"],
+      "bottom_label": "Comprehensive approach",
+      "bottom_title_pre": "From concept to",
+      "bottom_title_accent": "delivery",
+      "bottom_description": "We are not just a subcontractor — we are a technology partner. We take full responsibility for the entire project.",
+      "bottom_cta": "Request a quote"
+    },
+    "projects": {
+      "hero_label": "Portfolio",
+      "hero_title_accent": "120+",
+      "hero_title_mid": "completed",
+      "hero_title_post": "projects",
+      "hero_description": "Every project is proof of our commitment and dedication to the highest quality. We deliver for the largest industrial companies in Europe.",
+      "filter_all": "All",
+      "filter_mechanika": "Mechanics",
+      "filter_elektryka": "Electrics",
+      "filter_automatyka": "Automation",
+      "filter_pneumatyka": "Pneumatics",
+      "cta_label": "Your project",
+      "cta_title_pre": "We will deliver",
+      "cta_title_accent": "your project",
+      "cta_button": "Contact us"
+    },
+    "contact": {
+      "hero_label": "Contact us",
+      "hero_title_pre": "Write",
+      "hero_title_accent": "to us.",
+      "hero_description": "We are ready to listen to your project. Contact us — we will respond within 24 hours.",
+      "section_label": "Contact details",
+      "phone_label": "Phone",
+      "email_label": "Email",
+      "address_label": "Address"
+    }
+  },
+  "service_detail": {
+    "not_found": "Service not found",
+    "back_to_services": "Back to services",
+    "service_label": "Service",
+    "scope_label": "Scope of services",
+    "scope_title_pre": "What we offer in",
+    "detail_suffix": "We treat every assignment individually — we select the optimal technical solution and provide full support.",
+    "cta_button": "Request a quote",
+    "cta_label": "Ready to deliver",
+    "cta_title_pre": "Let's talk about",
+    "cta_title_accent": "your project",
+    "cta_description": "Contact us — we will quote the project and propose the best technical solution.",
+    "cta_contact": "Contact us",
+    "cta_all_services": "All services",
+    "ticker_experience": "20+ Years Experience",
+    "ticker_projects": "120+ Projects",
+    "ticker_reach": "Europe"
+  },
+  "notfound": {
+    "description": "Page not found",
+    "back": "Back to homepage"
+  },
+  "timeline": [
+    { "year": "2003", "title": "Company founded", "description": "Lubotech begins operations in Pyskowice as a mechanical company serving local industrial plants." },
+    { "year": "2008", "title": "Expansion into electrics", "description": "Extension of services to include comprehensive electrical services and control cabinet construction. First foreign contracts." },
+    { "year": "2013", "title": "Automation & robotisation", "description": "Launch of automation department. Completion of first robotic workstations for the automotive industry." },
+    { "year": "2018", "title": "13 countries, 85 employees", "description": "Dynamic growth — the company has 85 employees and carries out projects in 13 European countries." },
+    { "year": "2024", "title": "120+ completed projects", "description": "We exceed 120 projects. We are developing our competences in Industry 4.0 and SCADA systems." }
+  ],
+  "values": [
+    { "title": "Quality", "description": "Every project is carried out with the utmost attention to detail. We apply ISO standards and industry best practices." },
+    { "title": "Team", "description": "85 experienced engineers and technicians ready to carry out even the most demanding projects." },
+    { "title": "Innovation", "description": "We continuously follow new technologies and implement Industry 4.0 solutions, robotisation and vision systems." },
+    { "title": "Timeliness", "description": "We meet agreed deadlines. Every project is planned in detail to be ready on time." },
+    { "title": "Reach", "description": "We operate in 13 European countries. No project is too far for us — we are where our client is." },
+    { "title": "Reliability", "description": "Warranty and post-warranty service, remote support. We are with the client throughout the entire machine lifecycle." }
+  ],
+  "projects": [
+    { "title": "Welding Line with FANUC Robot", "client": "Volkswagen — Germany" },
+    { "title": "Press Shop Line Relocation", "client": "Opel — Poland" },
+    { "title": "Control Cabinets for Production Line", "client": "ThyssenKrupp — Czech Republic" },
+    { "title": "SCADA System — Production Monitoring", "client": "KUKA — Germany" },
+    { "title": "Pneumatic System Optimisation", "client": "Dürr — Poland" },
+    { "title": "Special Assembly Workstation", "client": "EDAG — Germany" },
+    { "title": "Robotic Palletising Workstation", "client": "FFT — Poland" },
+    { "title": "Plant Electrical Installation Upgrade", "client": "Movomech — Sweden" },
+    { "title": "CNC Welding Machine Construction", "client": "TMS — Poland" }
+  ],
+  "seo": {
+    "home": {
+      "title": "Lubotech – Industrial Automation & Robotics | Pyskowice, Poland",
+      "description": "Lubotech – machine design, construction and automation. Mechanics, electrics, automation, pneumatics. 20+ years of experience. Pyskowice, Poland."
+    },
+    "about": {
+      "title": "About Us – Lubotech | 20 Years of Automation Experience",
+      "description": "Meet Lubotech – a company with over 20 years of experience in machine design and automation. Operating in Poland and 13 European countries."
+    },
+    "services": {
+      "title": "Services – Mechanics, Electrics, Automation, Pneumatics | Lubotech",
+      "description": "Comprehensive engineering services: machine design, control cabinets, PLC programming, robotisation, pneumatic systems. Lubotech, Pyskowice."
+    },
+    "projects": {
+      "title": "Projects – Automation Realisations | Lubotech",
+      "description": "Over 120 completed projects for Volkswagen, Opel, KUKA, ThyssenKrupp and others. Automation systems, production lines, robotisation."
+    },
+    "contact": {
+      "title": "Contact – Lubotech | ul. Poznańska 15, Pyskowice, Poland",
+      "description": "Contact Lubotech. Phone: +48 32 66 64 450, Email: info@lubotech.pl. Address: ul. Poznańska 15, 44-120 Pyskowice, Poland."
+    }
+  }
+}

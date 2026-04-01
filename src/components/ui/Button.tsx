@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import LangContext from '../../contexts/LangContext';
 
 interface BaseProps {
   children: React.ReactNode;
@@ -58,12 +59,14 @@ const secondaryStyle: React.CSSProperties = {
 };
 
 const Button: React.FC<Props> = ({ children, variant = 'primary', to, onClick, style }) => {
-  const base = variant === 'primary' ? primaryStyle : secondaryStyle;
+  const { prefix } = useContext(LangContext);
+  const base   = variant === 'primary' ? primaryStyle : secondaryStyle;
   const merged = { ...base, ...style };
 
   if (to) {
+    const finalTo = to.startsWith('http') ? to : `${prefix}${to}`;
     return (
-      <Link to={to} style={merged}
+      <Link to={finalTo} style={merged}
         onMouseEnter={e => {
           if (variant === 'primary') (e.currentTarget as HTMLElement).style.background = '#fff';
           if (variant === 'secondary') { (e.currentTarget as HTMLElement).style.borderBottomColor = 'var(--text)'; (e.currentTarget as HTMLElement).style.gap = '20px'; }

@@ -1,0 +1,280 @@
+{
+  "nav": {
+    "about": "O nas",
+    "services": "Usługi",
+    "projects": "Realizacje",
+    "contact": "Kontakt",
+    "cta": "Zapytaj o projekt"
+  },
+  "hero": {
+    "badge": "Automatyzacja Przemysłowa — Pyskowice",
+    "line1": "Zautomatyzujemy",
+    "line2_pre": "Twoją",
+    "line2_accent": "Firmę.",
+    "line3": "Kompleksowo.",
+    "description": "Projektowanie, budowa i automatyzacja maszyn oraz linii produkcyjnych. Kompleksowe rozwiązania — od koncepcji po gotowe urządzenie.",
+    "btn_services": "Nasze Usługi",
+    "btn_contact": "Kontakt"
+  },
+  "stats": {
+    "label": "W liczbach",
+    "title_pre": "Wyniki mówią",
+    "title_accent": "same za siebie",
+    "description": "Od pomysłu do realizacji — każdy projekt to dowód naszego zaangażowania i dbałości o najwyższą jakość.",
+    "labels": ["Zrealizowanych projektów", "Lat doświadczenia", "Zatrudnionych pracowników", "Krajów obsługi"]
+  },
+  "about_section": {
+    "label": "O Firmie",
+    "title_pre": "Twoja produkcja.",
+    "title_middle": "Nasza",
+    "title_accent": "inżynieria.",
+    "p1": "Lubotech to firma specjalizująca się w projektowaniu, budowie oraz automatyzacji maszyn i linii produkcyjnych.",
+    "p2": "Oferujemy kompleksowe rozwiązania wspierające przedsiębiorstwa w modernizacji i optymalizacji procesów produkcyjnych na terenie całej Europy.",
+    "badge": "20+ LAT DOŚWIADCZENIA",
+    "check_items": [
+      "Indywidualne podejście do klienta",
+      "Optymalizacja kosztów i wydajności",
+      "Realizacja projektów na czas",
+      "Najnowsze technologie",
+      "Wysoka jakość i precyzja wykonania"
+    ],
+    "cta": "Dowiedz się więcej o nas"
+  },
+  "services_section": {
+    "label": "Co robimy",
+    "title": "Kompleksowe",
+    "title2": "rozwiązania",
+    "title_accent": "przemysłowe",
+    "description": "Specjalizujemy się w projektowaniu, budowie i automatyzacji maszyn oraz linii produkcyjnych. Wspieramy przedsiębiorstwa w modernizacji i optymalizacji procesów.",
+    "cta": "Porozmawiajmy o projekcie"
+  },
+  "services": {
+    "mechanika": {
+      "title": "Mechanika",
+      "subtitle": "Projektowanie, Montaż i Relokacja Maszyn",
+      "description": "Specjalizujemy się w projektowaniu i budowie maszyn specjalnych, montażu i relokacji linii produkcyjnych oraz serwisie mechanicznym dla przemysłu.",
+      "items": [
+        "Projektowanie i budowa maszyn specjalnych",
+        "Montaż i relokacja linii produkcyjnych",
+        "Modernizacja istniejących stanowisk",
+        "Serwis i naprawy mechaniczne",
+        "Dokumentacja techniczna i rysunki 3D"
+      ]
+    },
+    "elektryka": {
+      "title": "Elektryka",
+      "subtitle": "Instalacje, Szafy Sterownicze, Pomiary, EPLAN",
+      "description": "Kompleksowe usługi elektryczne dla przemysłu — od projektowania szaf sterowniczych, przez instalacje, po pomiary i dokumentację EPLAN.",
+      "items": [
+        "Projektowanie i budowa szaf sterowniczych",
+        "Instalacje elektryczne przemysłowe",
+        "Pomiary i certyfikacja instalacji",
+        "Dokumentacja EPLAN Electric P8",
+        "Wsparcie certyfikacji CE maszyn"
+      ]
+    },
+    "automatyka": {
+      "title": "Automatyka",
+      "subtitle": "Programowanie i Automatyzacja Procesów",
+      "description": "Automatyzujemy i optymalizujemy procesy produkcyjne — od programowania sterowników PLC, przez robotyzację, po systemy SCADA i rozwiązania Przemysłu 4.0.",
+      "items": [
+        "Programowanie sterowników PLC (Siemens, Beckhoff)",
+        "Robotyzacja stanowisk (FANUC, ABB, KUKA)",
+        "Systemy SCADA i HMI",
+        "Systemy wizyjne i kontrola jakości",
+        "Integracja systemów Przemysłu 4.0"
+      ]
+    },
+    "pneumatyka": {
+      "title": "Pneumatyka",
+      "subtitle": "Projektowanie i Optymalizacja Układów",
+      "description": "Projektujemy, montujemy i optymalizujemy układy pneumatyczne dla maszyn i linii produkcyjnych. Pracujemy ze wszystkimi wiodącymi dostawcami komponentów.",
+      "items": [
+        "Projektowanie układów pneumatycznych",
+        "Montaż i okablowanie komponentów",
+        "Optymalizacja zużycia sprężonego powietrza",
+        "Diagnostyka i serwis układów",
+        "Dobór komponentów Festo, SMC, Bosch Rexroth"
+      ]
+    }
+  },
+  "faq_section": {
+    "label": "Pytania i odpowiedzi",
+    "title_pre": "Najczęstsze",
+    "title_accent": "pytania"
+  },
+  "faq": [
+    {
+      "question": "Czy projektujecie maszyny specjalne na zamówienie?",
+      "answer": "Tak. Tworzymy maszyny specjalne i stanowiska zrobotyzowane dopasowane do indywidualnych wymagań procesu produkcyjnego. Projektujemy od podstaw — od koncepcji po gotowe urządzenie."
+    },
+    {
+      "question": "Czy zapewniacie serwis i wsparcie techniczne?",
+      "answer": "Zapewniamy serwis gwarancyjny i pogwarancyjny, przeglądy, modernizacje oraz zdalne wsparcie. Dbamy o ciągłość pracy linii produkcyjnych i szybkie reagowanie na potrzeby klientów."
+    },
+    {
+      "question": "Czy zajmujecie się relokacją linii produkcyjnych?",
+      "answer": "Tak. Oferujemy kompleksową relokację linii produkcyjnych — demontaż, transport, ponowny montaż, integrację systemów oraz uruchomienie w nowej lokalizacji."
+    },
+    {
+      "question": "Czy modernizujecie istniejące linie produkcyjne?",
+      "answer": "Oferujemy modernizacje i optymalizacje linii produkcyjnych, w tym wymianę sterowników, integrację robotów, przebudowę stanowisk, zwiększenie wydajności oraz poprawę bezpieczeństwa."
+    },
+    {
+      "question": "Czy wykonujecie pomiary elektryczne instalacji?",
+      "answer": "Tak. Wykonujemy profesjonalne pomiary elektryczne instalacji, maszyn oraz linii produkcyjnych zgodnie z obowiązującymi normami. Dostarczamy pełną dokumentację z wynikami pomiarów i zaleceniami."
+    },
+    {
+      "question": "Ile krajów obsługujecie?",
+      "answer": "Świadczyliśmy usługi w 13 krajach Europy. Realizujemy projekty na terenie Polski i za granicą — w Niemczech, Czechach, Słowacji i innych krajach europejskich."
+    }
+  ],
+  "contact_section": {
+    "label": "Kontakt",
+    "title": "Skontaktuj się",
+    "title_accent": "z nami.",
+    "description": "Odpowiadamy w ciągu 24 godzin. Możesz również odwiedzić nas bezpośrednio w naszej siedzibie w Pyskowicach.",
+    "phone_label": "Telefon",
+    "email_label": "Email",
+    "address_label": "Adres"
+  },
+  "footer": {
+    "privacy": "Polityka Prywatności",
+    "address": "ul. Poznańska 15, 44-120 Pyskowice"
+  },
+  "pages": {
+    "about": {
+      "hero_label": "O firmie",
+      "hero_title_pre": "Twoja produkcja.",
+      "hero_title_accent": "Nasza inżynieria.",
+      "hero_description": "Lubotech to firma z ponad 20-letnim doświadczeniem w projektowaniu, budowie i automatyzacji maszyn oraz linii produkcyjnych. Działamy w Polsce i 13 krajach Europy.",
+      "ticker": ["20+ Lat", "120+ Projektów", "85 Pracowników", "13 Krajów"],
+      "mission_label": "Misja i wizja",
+      "mission_title": "Zaangażowani w",
+      "mission_title_accent": "doskonałość",
+      "mission_p1": "Misją Lubotech jest dostarczanie innowacyjnych rozwiązań inżynieryjnych, które zwiększają efektywność i konkurencyjność naszych klientów. Realizujemy projekty kompleksowo — od koncepcji po wdrożenie i serwis.",
+      "mission_p2": "Naszą wizją jest bycie liderem w automatyzacji przemysłowej w Polsce i Europie Środkowej, rozwijając się wraz z naszymi klientami i wdrażając najnowsze technologie Przemysłu 4.0.",
+      "timeline_label": "Historia",
+      "timeline_title": "Ponad",
+      "timeline_title_accent": "20 lat",
+      "timeline_title_post": "na rynku",
+      "values_label": "Nasze wartości",
+      "values_title": "Co nas",
+      "values_title_accent": "wyróżnia",
+      "cta_label": "Dołącz do nas",
+      "cta_title": "Zacznijmy",
+      "cta_title_accent": "współpracę",
+      "cta_description": "Skontaktuj się z nami i opowiedz o swoim projekcie. Przygotujemy indywidualną ofertę.",
+      "cta_button": "Skontaktuj się z nami"
+    },
+    "services": {
+      "hero_label": "Usługi",
+      "hero_title_pre": "Kompletna",
+      "hero_title_mid": "oferta",
+      "hero_title_accent": "inżynieryjna",
+      "hero_description": "Cztery kluczowe działy — mechanika, elektryka, automatyka i pneumatyka — tworzą kompleksowe rozwiązanie dla Twojego zakładu produkcyjnego.",
+      "ticker": ["Mechanika", "Elektryka", "Automatyka", "Pneumatyka"],
+      "bottom_label": "Kompleksowe podejście",
+      "bottom_title_pre": "Od koncepcji do",
+      "bottom_title_accent": "realizacji",
+      "bottom_description": "Nie jesteśmy tylko podwykonawcą — jesteśmy partnerem technologicznym. Przejmujemy odpowiedzialność za cały projekt.",
+      "bottom_cta": "Zapytaj o wycenę"
+    },
+    "projects": {
+      "hero_label": "Portfolio",
+      "hero_title_accent": "120+",
+      "hero_title_mid": "zrealizowanych",
+      "hero_title_post": "projektów",
+      "hero_description": "Każdy projekt to dowód naszego zaangażowania i dbałości o najwyższą jakość. Realizujemy zlecenia dla największych firm przemysłowych w Europie.",
+      "filter_all": "Wszystkie",
+      "filter_mechanika": "Mechanika",
+      "filter_elektryka": "Elektryka",
+      "filter_automatyka": "Automatyka",
+      "filter_pneumatyka": "Pneumatyka",
+      "cta_label": "Twój projekt",
+      "cta_title_pre": "Zrealizujemy Twój",
+      "cta_title_accent": "projekt",
+      "cta_button": "Skontaktuj się z nami"
+    },
+    "contact": {
+      "hero_label": "Skontaktuj się",
+      "hero_title_pre": "Napisz",
+      "hero_title_accent": "do nas.",
+      "hero_description": "Jesteśmy gotowi wysłuchać Twojego projektu. Skontaktuj się z nami — odpowiemy w ciągu 24 godzin.",
+      "section_label": "Dane kontaktowe",
+      "phone_label": "Telefon",
+      "email_label": "Email",
+      "address_label": "Adres"
+    }
+  },
+  "service_detail": {
+    "not_found": "Nie znaleziono usługi",
+    "back_to_services": "Wróć do usług",
+    "service_label": "Usługa",
+    "scope_label": "Zakres usług",
+    "scope_title_pre": "Co oferujemy w zakresie",
+    "detail_suffix": "Każde zlecenie traktujemy indywidualnie — dobieramy optymalne rozwiązanie techniczne i zapewniamy pełne wsparcie.",
+    "cta_button": "Zapytaj o wycenę",
+    "cta_label": "Gotowi do realizacji",
+    "cta_title_pre": "Porozmawiajmy o Twoim",
+    "cta_title_accent": "projekcie",
+    "cta_description": "Skontaktuj się — wycenimy projekt i zaproponujemy najlepsze rozwiązanie techniczne.",
+    "cta_contact": "Kontakt z nami",
+    "cta_all_services": "Wszystkie usługi",
+    "ticker_experience": "20+ Lat Doświadczenia",
+    "ticker_projects": "120+ Projektów",
+    "ticker_reach": "Europa"
+  },
+  "notfound": {
+    "description": "Strona nie istnieje",
+    "back": "Wróć do strony głównej"
+  },
+  "timeline": [
+    { "year": "2003", "title": "Założenie firmy", "description": "Lubotech rozpoczyna działalność w Pyskowicach jako firma mechaniczna obsługująca lokalne zakłady przemysłowe." },
+    { "year": "2008", "title": "Ekspansja na elektrykę", "description": "Rozszerzenie oferty o kompleksowe usługi elektryczne i budowę szaf sterowniczych. Pierwsze kontrakty zagraniczne." },
+    { "year": "2013", "title": "Automatyzacja i robotyzacja", "description": "Wdrożenie działu automatyki. Realizacja pierwszych stanowisk zrobotyzowanych dla przemysłu motoryzacyjnego." },
+    { "year": "2018", "title": "13 krajów, 85 pracowników", "description": "Dynamiczny rozwój — firma liczy 85 pracowników i realizuje projekty w 13 krajach Europy." },
+    { "year": "2024", "title": "120+ zrealizowanych projektów", "description": "Przekraczamy próg 120 projektów. Rozwijamy kompetencje w zakresie Przemysłu 4.0 i systemów SCADA." }
+  ],
+  "values": [
+    { "title": "Jakość", "description": "Każdy projekt realizujemy z najwyższą dbałością o szczegóły. Stosujemy normy ISO i najlepsze praktyki branżowe." },
+    { "title": "Zespół", "description": "85 doświadczonych inżynierów i techników gotowych do realizacji nawet najbardziej wymagających projektów." },
+    { "title": "Innowacje", "description": "Nieustannie śledzimy nowe technologie i wdrażamy rozwiązania Przemysłu 4.0, robotyzację i systemy wizyjne." },
+    { "title": "Terminowość", "description": "Dotrzymujemy umówionych terminów. Każdy projekt planujemy szczegółowo, by być gotowi na czas." },
+    { "title": "Zasięg", "description": "Działamy w 13 krajach Europy. Żaden projekt nie jest dla nas za daleki — jesteśmy tam, gdzie jest klient." },
+    { "title": "Niezawodność", "description": "Serwis gwarancyjny i pogwarancyjny, wsparcie zdalne. Jesteśmy z klientem przez cały cykl życia maszyny." }
+  ],
+  "projects": [
+    { "title": "Linia Spawalnicza z Robotem FANUC", "client": "Volkswagen — Niemcy" },
+    { "title": "Relokacja Linii Tłoczni", "client": "Opel — Polska" },
+    { "title": "Szafy Sterownicze dla Linii", "client": "ThyssenKrupp — Czechy" },
+    { "title": "System SCADA — Nadzór Produkcji", "client": "KUKA — Niemcy" },
+    { "title": "Optymalizacja Układu Pneumatycznego", "client": "Dürr — Polska" },
+    { "title": "Stanowisko Montażowe Specjalne", "client": "EDAG — Niemcy" },
+    { "title": "Zrobotyzowane Stanowisko Paletyzacji", "client": "FFT — Polska" },
+    { "title": "Modernizacja Instalacji Zakładu", "client": "Movomech — Szwecja" },
+    { "title": "Budowa Maszyny Spawalniczej CNC", "client": "TMS — Polska" }
+  ],
+  "seo": {
+    "home": {
+      "title": "Lubotech – Automatyzacja i Robotyzacja Przemysłu | Pyskowice",
+      "description": "Lubotech – projektowanie, budowa i automatyzacja maszyn. Mechanika, elektryka, automatyka, pneumatyka. 20+ lat doświadczenia. Pyskowice, Polska."
+    },
+    "about": {
+      "title": "O nas – Lubotech | 20 lat doświadczenia w automatyzacji",
+      "description": "Poznaj Lubotech – firmę z ponad 20-letnim doświadczeniem w projektowaniu i automatyzacji maszyn. Działamy w Polsce i 13 krajach Europy."
+    },
+    "services": {
+      "title": "Usługi – Mechanika, Elektryka, Automatyka, Pneumatyka | Lubotech",
+      "description": "Kompleksowe usługi inżynieryjne: projektowanie maszyn, szafy sterownicze, programowanie PLC, robotyzacja, układy pneumatyczne. Lubotech, Pyskowice."
+    },
+    "projects": {
+      "title": "Realizacje – Projekty Automatyzacji | Lubotech",
+      "description": "Ponad 120 zrealizowanych projektów dla Volkswagen, Opel, KUKA, ThyssenKrupp i innych. Systemy automatyzacji, linie produkcyjne, robotyzacja."
+    },
+    "contact": {
+      "title": "Kontakt – Lubotech | ul. Poznańska 15, Pyskowice",
+      "description": "Skontaktuj się z Lubotech. Tel: +48 32 66 64 450, Email: info@lubotech.pl. Adres: ul. Poznańska 15, 44-120 Pyskowice."
+    }
+  }
+}

@@ -1,20 +1,15 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import SectionLabel from '../ui/SectionLabel';
 import Button from '../ui/Button';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { GearsBg } from '../ui/AutomationBg';
 
-const CHECK_ITEMS = [
-  'Indywidualne podejście do klienta',
-  'Optymalizacja kosztów i wydajności',
-  'Realizacja projektów na czas',
-  'Najnowsze technologie',
-  'Wysoka jakość i precyzja wykonania',
-];
-
 const AboutSection: React.FC = () => {
   const leftRef  = useScrollReveal<HTMLDivElement>();
   const rightRef = useScrollReveal<HTMLDivElement>();
+  const { t } = useTranslation();
+  const checkItems = t('about_section.check_items', { returnObjects: true }) as string[];
 
   return (
     <section className="about-section" style={{
@@ -85,14 +80,14 @@ const AboutSection: React.FC = () => {
               fontSize:      '18px',
               letterSpacing: '3px',
             }}>
-              20+ LAT DOŚWIADCZENIA
+              {t('about_section.badge')}
             </div>
           </div>
         </div>
 
         {/* Content */}
         <div ref={rightRef} className="reveal-right" style={{ transitionDelay: '0.2s' }}>
-          <SectionLabel>O Firmie</SectionLabel>
+          <SectionLabel>{t('about_section.label')}</SectionLabel>
           <h2 style={{
             fontFamily:    "'Bebas Neue', sans-serif",
             fontSize:      'clamp(42px, 5vw, 72px)',
@@ -100,21 +95,18 @@ const AboutSection: React.FC = () => {
             letterSpacing: '1px',
             marginBottom:  '32px',
           }}>
-            Twoja produkcja.<br />
-            Nasza <span style={{ color: 'var(--accent)' }}>inżynieria.</span>
+            {t('about_section.title_pre')}<br />
+            {t('about_section.title_middle')} <span style={{ color: 'var(--accent)' }}>{t('about_section.title_accent')}</span>
           </h2>
           <p style={{ fontSize: '16px', color: 'rgba(240,240,240,0.65)', lineHeight: 1.8, marginBottom: '16px' }}>
-            Lubotech to firma specjalizująca się w projektowaniu, budowie
-            oraz automatyzacji maszyn i linii produkcyjnych.
+            {t('about_section.p1')}
           </p>
           <p style={{ fontSize: '16px', color: 'rgba(240,240,240,0.65)', lineHeight: 1.8 }}>
-            Oferujemy kompleksowe rozwiązania wspierające przedsiębiorstwa
-            w modernizacji i optymalizacji procesów produkcyjnych na terenie
-            całej Europy.
+            {t('about_section.p2')}
           </p>
 
           <div style={{ marginTop: '40px', display: 'flex', flexDirection: 'column', gap: '2px' }}>
-            {CHECK_ITEMS.map(item => (
+            {checkItems.map(item => (
               <div key={item} style={{
                 display:       'flex',
                 alignItems:    'center',
@@ -139,7 +131,7 @@ const AboutSection: React.FC = () => {
 
           <div style={{ marginTop: '40px' }}>
             <Button to="/o-nas" variant="secondary">
-              Dowiedz się więcej o nas
+              {t('about_section.cta')}
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>

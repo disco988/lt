@@ -1,20 +1,14 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import PageHero     from '../components/ui/PageHero';
 import SectionLabel from '../components/ui/SectionLabel';
 import Button       from '../components/ui/Button';
+import SEO          from '../components/ui/SEO';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { PROJECTS } from '../data';
 import type { Project } from '../types';
 
 type Category = 'all' | 'mechanika' | 'elektryka' | 'automatyka' | 'pneumatyka';
-
-const FILTERS: { label: string; value: Category }[] = [
-  { label: 'Wszystkie', value: 'all'       },
-  { label: 'Mechanika', value: 'mechanika' },
-  { label: 'Elektryka', value: 'elektryka' },
-  { label: 'Automatyka',value: 'automatyka'},
-  { label: 'Pneumatyka',value: 'pneumatyka'},
-];
 
 const ProjectCard: React.FC<{ project: Project; delay: number }> = ({ project, delay }) => {
   const ref     = useScrollReveal<HTMLDivElement>();
@@ -38,7 +32,6 @@ const ProjectCard: React.FC<{ project: Project; delay: number }> = ({ project, d
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      {/* Decorative SVG bg */}
       <div style={{
         position:  'absolute', inset: 0,
         display:   'flex', alignItems:'center', justifyContent:'center',
@@ -54,7 +47,6 @@ const ProjectCard: React.FC<{ project: Project; delay: number }> = ({ project, d
         </svg>
       </div>
 
-      {/* Big number */}
       <div style={{
         position:      'absolute', right:'16px', top:'16px',
         fontFamily:    "'Bebas Neue',sans-serif",
@@ -66,7 +58,6 @@ const ProjectCard: React.FC<{ project: Project; delay: number }> = ({ project, d
         {project.num}
       </div>
 
-      {/* Overlay */}
       <div style={{
         position:   'absolute', inset: 0,
         background: 'linear-gradient(to top, rgba(5,5,7,0.95) 0%, rgba(5,5,7,0.3) 60%, transparent 100%)',
@@ -74,7 +65,6 @@ const ProjectCard: React.FC<{ project: Project; delay: number }> = ({ project, d
         transition: 'opacity 0.3s',
       }} />
 
-      {/* Info */}
       <div style={{
         position:   'absolute', bottom: 0, left: 0, right: 0,
         padding:    '28px',
@@ -105,23 +95,37 @@ const ProjectCard: React.FC<{ project: Project; delay: number }> = ({ project, d
 
 const ProjectsPage: React.FC = () => {
   const [active, setActive] = useState<Category>('all');
+  const { t } = useTranslation();
 
-  const filtered = active === 'all'
-    ? PROJECTS
-    : PROJECTS.filter(p => p.category === active);
+  const projTexts = t('projects', { returnObjects: true }) as { title: string; client: string }[];
+  const projects  = PROJECTS.map((p, i) => ({
+    ...p,
+    title:  projTexts[i]?.title  || p.title,
+    client: projTexts[i]?.client || p.client,
+  }));
+
+  const filters: { label: string; value: Category }[] = [
+    { label: t('pages.projects.filter_all'),       value: 'all'       },
+    { label: t('pages.projects.filter_mechanika'), value: 'mechanika' },
+    { label: t('pages.projects.filter_elektryka'), value: 'elektryka' },
+    { label: t('pages.projects.filter_automatyka'),value: 'automatyka'},
+    { label: t('pages.projects.filter_pneumatyka'),value: 'pneumatyka'},
+  ];
+
+  const filtered = active === 'all' ? projects : projects.filter(p => p.category === active);
 
   return (
     <>
+      <SEO page="projects" />
       <PageHero
-        label="Portfolio"
-        title={<><span style={{ color:'var(--accent)' }}>120+</span><br />zrealizowanych<br />projektów</>}
-        description="Każdy projekt to dowód naszego zaangażowania i dbałości o najwyższą jakość. Realizujemy zlecenia dla największych firm przemysłowych w Europie."
+        label={t('pages.projects.hero_label')}
+        title={<><span style={{ color:'var(--accent)' }}>{t('pages.projects.hero_title_accent')}</span><br />{t('pages.projects.hero_title_mid')}<br />{t('pages.projects.hero_title_post')}</>}
+        description={t('pages.projects.hero_description')}
       />
 
       <section className="page-section" style={{ padding:'100px 48px' }}>
-        {/* Filters */}
         <div style={{ display:'flex', gap:'2px', marginBottom:'40px', flexWrap:'wrap' }}>
-          {FILTERS.map(f => (
+          {filters.map(f => (
             <button
               key={f.value}
               onClick={() => setActive(f.value)}
@@ -144,7 +148,6 @@ const ProjectsPage: React.FC = () => {
           ))}
         </div>
 
-        {/* Grid */}
         <div className="projects-grid" style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'2px' }}>
           {filtered.map((p, i) => (
             <ProjectCard key={p.id} project={p} delay={i * 0.05} />
@@ -153,13 +156,12 @@ const ProjectsPage: React.FC = () => {
       </section>
 
       <section className="page-section" style={{ padding:'80px 48px', background:'var(--surface)', borderTop:'1px solid var(--border)', textAlign:'center' }}>
-        <SectionLabel center>Twój projekt</SectionLabel>
+        <SectionLabel center>{t('pages.projects.cta_label')}</SectionLabel>
         <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(42px,6vw,80px)', lineHeight:1, marginBottom:'24px' }}>
-          Zrealizujemy Twój <span style={{ color:'var(--accent)' }}>projekt</span>
+          {t('pages.projects.cta_title_pre')} <span style={{ color:'var(--accent)' }}>{t('pages.projects.cta_title_accent')}</span>
         </h2>
-        <Button to="/kontakt">Skontaktuj się z nami</Button>
+        <Button to="/kontakt">{t('pages.projects.cta_button')}</Button>
       </section>
-
     </>
   );
 };

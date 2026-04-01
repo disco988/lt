@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { useLangCtx } from '../../contexts/LangContext';
 import SectionLabel from '../ui/SectionLabel';
 import Button       from '../ui/Button';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
@@ -7,7 +9,6 @@ import { SERVICES } from '../../data';
 import type { Service } from '../../types';
 import { ConveyorBg } from '../ui/AutomationBg';
 
-/* ── Arrow icon ── */
 const Arrow: React.FC = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
     stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -15,9 +16,10 @@ const Arrow: React.FC = () => (
   </svg>
 );
 
-/* ── Single service row – own component keeps hooks at top level ── */
 const ServiceRow: React.FC<{ service: Service; delay: number }> = ({ service, delay }) => {
-  const wrapRef  = useScrollReveal<HTMLDivElement>();
+  const wrapRef = useScrollReveal<HTMLDivElement>();
+  const { t } = useTranslation();
+  const { prefix } = useLangCtx();
 
   const handleEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.currentTarget.style.background = 'rgba(232,255,0,0.04)';
@@ -43,7 +45,7 @@ const ServiceRow: React.FC<{ service: Service; delay: number }> = ({ service, de
   return (
     <div ref={wrapRef} className="reveal" style={{ transitionDelay:`${delay}s` }}>
       <Link
-        to={service.slug}
+        to={`${prefix}${service.slug}`}
         className="service-row"
         style={{
           display:             'grid',
@@ -62,7 +64,6 @@ const ServiceRow: React.FC<{ service: Service; delay: number }> = ({ service, de
         onMouseEnter={handleEnter}
         onMouseLeave={handleLeave}
       >
-        {/* left accent bar */}
         <div className="svc-bar" style={{
           position:'absolute', left:0, top:0, bottom:0, width:'3px',
           background:'var(--accent)', transform:'scaleY(0)',
@@ -78,10 +79,10 @@ const ServiceRow: React.FC<{ service: Service; delay: number }> = ({ service, de
 
         <div>
           <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'32px', letterSpacing:'2px' }}>
-            {service.title}
+            {t(`services.${service.id}.title`)}
           </div>
           <div style={{ fontSize:'13px', color:'var(--muted)', marginTop:'6px' }}>
-            {service.subtitle}
+            {t(`services.${service.id}.subtitle`)}
           </div>
         </div>
 
@@ -98,34 +99,31 @@ const ServiceRow: React.FC<{ service: Service; delay: number }> = ({ service, de
   );
 };
 
-/* ── Section ── */
 const ServicesSection: React.FC = () => {
   const leftRef  = useScrollReveal<HTMLDivElement>();
   const rightRef = useScrollReveal<HTMLDivElement>();
+  const { t } = useTranslation();
 
   return (
     <section className="services-section" style={{ padding:'0 48px 120px', position:'relative', overflow:'hidden' }}>
       <ConveyorBg style={{ bottom: 0, left: 0, width: '100%', height: 'auto' }} />
-      {/* Intro */}
       <div className="services-intro" style={{
         display:'grid', gridTemplateColumns:'1fr 1fr', gap:'80px',
         marginBottom:'80px', alignItems:'flex-end',
       }}>
         <div ref={leftRef} className="reveal-left">
-          <SectionLabel>Co robimy</SectionLabel>
+          <SectionLabel>{t('services_section.label')}</SectionLabel>
           <h2 style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:'clamp(42px,6vw,80px)', lineHeight:1 }}>
-            Kompleksowe<br />rozwiązania<br />
-            <span style={{ color:'var(--accent)' }}>przemysłowe</span>
+            {t('services_section.title')}<br />{t('services_section.title2')}<br />
+            <span style={{ color:'var(--accent)' }}>{t('services_section.title_accent')}</span>
           </h2>
         </div>
         <div ref={rightRef} className="reveal-right" style={{ transitionDelay:'0.15s' }}>
           <p style={{ fontSize:'16px', color:'var(--muted)', lineHeight:1.8, marginBottom:'32px' }}>
-            Specjalizujemy się w projektowaniu, budowie i automatyzacji maszyn
-            oraz linii produkcyjnych. Wspieramy przedsiębiorstwa w modernizacji
-            i optymalizacji procesów.
+            {t('services_section.description')}
           </p>
           <Button to="/kontakt" variant="secondary">
-            Porozmawiajmy o projekcie
+            {t('services_section.cta')}
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
@@ -133,7 +131,6 @@ const ServicesSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Rows */}
       <div style={{ display:'grid', gap:'2px' }}>
         {SERVICES.map((s, i) => (
           <ServiceRow key={s.id} service={s} delay={i * 0.05} />

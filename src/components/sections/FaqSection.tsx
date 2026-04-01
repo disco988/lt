@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import SectionLabel from '../ui/SectionLabel';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
-import { FAQ_ITEMS } from '../../data';
 import type { FaqItem } from '../../types';
 import { PipeSchematicBg } from '../ui/AutomationBg';
 
@@ -84,10 +84,12 @@ const FaqSection: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const labelRef = useScrollReveal<HTMLDivElement>();
   const titleRef = useScrollReveal<HTMLHeadingElement>();
+  const { t } = useTranslation();
+  const faqItems = t('faq', { returnObjects: true }) as FaqItem[];
 
-  const half = Math.ceil(FAQ_ITEMS.length / 2);
-  const left  = FAQ_ITEMS.slice(0, half);
-  const right = FAQ_ITEMS.slice(half);
+  const half  = Math.ceil(faqItems.length / 2);
+  const left  = faqItems.slice(0, half);
+  const right = faqItems.slice(half);
 
   return (
     <section className="faq-section" style={{
@@ -98,7 +100,7 @@ const FaqSection: React.FC = () => {
     }}>
       <PipeSchematicBg style={{ right: '-4%', bottom: '-8%', height: '90%', width: 'auto' }} />
       <div ref={labelRef} className="reveal">
-        <SectionLabel>Pytania i odpowiedzi</SectionLabel>
+        <SectionLabel>{t('faq_section.label')}</SectionLabel>
       </div>
       <h2
         ref={titleRef}
@@ -111,7 +113,7 @@ const FaqSection: React.FC = () => {
           transitionDelay: '0.1s',
         }}
       >
-        Najczęstsze <span style={{ color: 'var(--accent)' }}>pytania</span>
+        {t('faq_section.title_pre')} <span style={{ color: 'var(--accent)' }}>{t('faq_section.title_accent')}</span>
       </h2>
 
       <div className="faq-grid" style={{

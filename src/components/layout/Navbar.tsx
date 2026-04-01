@@ -1,12 +1,53 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { useNavScroll } from '../../hooks/useNavScroll';
-import { NAV_LINKS } from '../../data';
+import { useLangCtx } from '../../contexts/LangContext';
 
 const Navbar: React.FC = () => {
-  const scrolled  = useNavScroll();
+  const scrolled = useNavScroll();
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
+  const navigate = useNavigate();
+  const { t } = useTranslation();
+  const { lang, prefix } = useLangCtx();
+
+  const navLinks = [
+    { label: t('nav.about'),    href: '/o-nas'      },
+    { label: t('nav.services'), href: '/uslugi'     },
+    { label: t('nav.projects'), href: '/realizacje' },
+    { label: t('nav.contact'),  href: '/kontakt'    },
+  ];
+
+  const switchLang = (newLang: string) => {
+    const stripped = pathname.replace(/^\/(en|de)/, '') || '/';
+    navigate(newLang === 'pl' ? stripped : `/${newLang}${stripped}`);
+    setOpen(false);
+  };
+
+  const isActive = (href: string) =>
+    pathname === `${prefix}${href}` || pathname === href;
+
+  const LangBtn: React.FC<{ code: string }> = ({ code }) => (
+    <button
+      onClick={() => switchLang(code)}
+      style={{
+        background:    'none',
+        border:        'none',
+        cursor:        'pointer',
+        fontSize:      '11px',
+        letterSpacing: '2px',
+        fontWeight:    lang === code ? 800 : 400,
+        color:         lang === code ? 'var(--accent)' : 'var(--muted)',
+        padding:       '2px 4px',
+        fontFamily:    "'JetBrains Mono', monospace",
+        textTransform: 'uppercase',
+        transition:    'color 0.2s',
+      }}
+    >
+      {code.toUpperCase()}
+    </button>
+  );
 
   return (
     <>
@@ -24,7 +65,7 @@ const Navbar: React.FC = () => {
           transition: 'all 0.3s',
         }}
       >
-        <Link to="/" style={{
+        <Link to={prefix || '/'} style={{
           fontFamily:    "'Bebas Neue', sans-serif",
           fontSize:      '28px',
           letterSpacing: '4px',
@@ -36,9 +77,9 @@ const Navbar: React.FC = () => {
 
         {/* Desktop links */}
         <div style={{ display:'flex', gap:'36px', alignItems:'center' }} className="nav-desktop">
-          {NAV_LINKS.map(l => (
-            <Link key={l.href} to={l.href} style={{
-              color:         pathname === l.href ? 'var(--text)' : 'var(--muted)',
+          {navLinks.map(l => (
+            <Link key={l.href} to={`${prefix}${l.href}`} style={{
+              color:         isActive(l.href) ? 'var(--text)' : 'var(--muted)',
               textDecoration:'none',
               fontSize:      '13px',
               letterSpacing: '2px',
@@ -52,6 +93,15 @@ const Navbar: React.FC = () => {
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }} className="nav-cta">
+          {/* Language switcher */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', borderRight: '1px solid var(--border)', paddingRight: '16px' }}>
+            <LangBtn code="pl" />
+            <span style={{ color: 'var(--border)', fontSize: '11px' }}>|</span>
+            <LangBtn code="en" />
+            <span style={{ color: 'var(--border)', fontSize: '11px' }}>|</span>
+            <LangBtn code="de" />
+          </div>
+
           <a
             href="https://www.facebook.com/p/Lubotech-100054369948528/"
             target="_blank"
@@ -65,7 +115,7 @@ const Navbar: React.FC = () => {
               <path d="M22 12c0-5.522-4.478-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.898V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
             </svg>
           </a>
-          <Link to="/kontakt" style={{
+          <Link to={`${prefix}/kontakt`} style={{
             background:    'var(--accent)',
             color:         '#000',
             padding:       '10px 24px',
@@ -80,7 +130,7 @@ const Navbar: React.FC = () => {
             onMouseEnter={e => (e.currentTarget.style.background = '#fff')}
             onMouseLeave={e => (e.currentTarget.style.background = 'var(--accent)')}
           >
-            Zapytaj o projekt
+            {t('nav.cta')}
           </Link>
         </div>
 
@@ -118,17 +168,41 @@ const Navbar: React.FC = () => {
           gap:            '32px',
           backdropFilter: 'blur(20px)',
         }}>
-          {NAV_LINKS.map(l => (
-            <Link key={l.href} to={l.href} onClick={() => setOpen(false)} style={{
+          {navLinks.map(l => (
+            <Link key={l.href} to={`${prefix}${l.href}`} onClick={() => setOpen(false)} style={{
               fontFamily:    "'Bebas Neue', sans-serif",
               fontSize:      '48px',
               letterSpacing: '4px',
-              color:         pathname === l.href ? 'var(--accent)' : 'var(--text)',
+              color:         isActive(l.href) ? 'var(--accent)' : 'var(--text)',
               textDecoration:'none',
             }}>
               {l.label}
             </Link>
           ))}
+
+          {/* Mobile language switcher */}
+          <div style={{ display: 'flex', gap: '16px', marginTop: '8px' }}>
+            {(['pl', 'en', 'de'] as const).map(code => (
+              <button
+                key={code}
+                onClick={() => switchLang(code)}
+                style={{
+                  background:    'none',
+                  border:        lang === code ? '1px solid var(--accent)' : '1px solid var(--border)',
+                  cursor:        'pointer',
+                  color:         lang === code ? 'var(--accent)' : 'var(--muted)',
+                  padding:       '8px 16px',
+                  fontSize:      '13px',
+                  letterSpacing: '2px',
+                  fontFamily:    "'JetBrains Mono', monospace",
+                  textTransform: 'uppercase',
+                }}
+              >
+                {code.toUpperCase()}
+              </button>
+            ))}
+          </div>
+
           <a
             href="https://www.facebook.com/p/Lubotech-100054369948528/"
             target="_blank"
