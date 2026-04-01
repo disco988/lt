@@ -84,7 +84,7 @@ const ContactPage: React.FC = () => {
       <SEO page="contact" />
       <PageHero
         label={t('pages.contact.hero_label')}
-        title={<>{t('pages.contact.hero_title_pre')}<br />do <span style={{ color:'var(--accent)' }}>{t('pages.contact.hero_title_accent')}</span></>}
+        title={<>{t('pages.contact.hero_title_pre')}<br /><span style={{ color:'var(--accent)' }}>{t('pages.contact.hero_title_accent')}</span></>}
         description={t('pages.contact.hero_description')}
       />
 
