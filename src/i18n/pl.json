@@ -129,6 +129,11 @@
       "answer": "Świadczyliśmy usługi w 13 krajach Europy. Realizujemy projekty na terenie Polski i za granicą — w Niemczech, Czechach, Słowacji i innych krajach europejskich."
     }
   ],
+  "clients_section": {
+    "label": "Zaufali nam",
+    "title_pre": "Klienci z całej",
+    "title_accent": "Europy"
+  },
   "contact_section": {
     "label": "Kontakt",
     "title": "Skontaktuj się",

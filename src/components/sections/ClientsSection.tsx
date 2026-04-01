@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import SectionLabel from '../ui/SectionLabel';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { CLIENTS } from '../../data';
@@ -7,11 +8,12 @@ const ClientsSection: React.FC = () => {
   const labelRef = useScrollReveal<HTMLDivElement>();
   const titleRef = useScrollReveal<HTMLHeadingElement>();
   const doubled  = [...CLIENTS, ...CLIENTS];
+  const { t }    = useTranslation();
 
   return (
     <section style={{ padding: '120px 48px' }}>
       <div ref={labelRef} className="reveal">
-        <SectionLabel>Zaufali nam</SectionLabel>
+        <SectionLabel>{t('clients_section.label')}</SectionLabel>
       </div>
       <h2
         ref={titleRef}
@@ -25,12 +27,11 @@ const ClientsSection: React.FC = () => {
           transitionDelay: '0.1s',
         }}
       >
-        Klienci z całej <span style={{ color: 'var(--accent)' }}>Europy</span>
+        {t('clients_section.title_pre')} <span style={{ color: 'var(--accent)' }}>{t('clients_section.title_accent')}</span>
       </h2>
 
       {/* Marquee track */}
       <div style={{ overflow: 'hidden', position: 'relative' }}>
-        {/* fade edges */}
         <div style={{
           position:   'absolute', top: 0, bottom: 0, left: 0, width: '200px',
           background: 'linear-gradient(to right, var(--bg), transparent)',

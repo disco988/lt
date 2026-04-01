@@ -129,6 +129,11 @@
       "answer": "Wir haben Dienstleistungen in 13 europäischen Ländern erbracht. Wir führen Projekte in Polen und im Ausland durch — in Deutschland, Tschechien, der Slowakei und anderen europäischen Ländern."
     }
   ],
+  "clients_section": {
+    "label": "Sie vertrauten uns",
+    "title_pre": "Kunden aus ganz",
+    "title_accent": "Europa"
+  },
   "contact_section": {
     "label": "Kontakt",
     "title": "Nehmen Sie",
