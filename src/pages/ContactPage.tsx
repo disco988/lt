@@ -132,46 +132,27 @@ const ContactPage: React.FC = () => {
           />
         </div>
 
-        {/* Map placeholder */}
+        {/* Map */}
         <div
           ref={mapRef}
           className="reveal"
           style={{
-            background:  'var(--surface)',
-            border:      '1px solid var(--border)',
-            aspectRatio: '21/6',
-            display:     'flex',
-            alignItems:  'center',
-            justifyContent: 'center',
-            position:    'relative',
-            overflow:    'hidden',
-            marginTop:   '2px',
+            border:    '1px solid var(--border)',
+            marginTop: '2px',
+            overflow:  'hidden',
+            lineHeight: 0,
           }}
         >
-          <div style={{
-            position:'absolute', inset:0,
-            background:'linear-gradient(135deg, rgba(232,255,0,0.03) 0%, transparent 60%)',
-          }} />
-          <div style={{ textAlign:'center', position:'relative', zIndex:1 }}>
-            <div style={{
-              width:'36px', height:'36px',
-              background:    'var(--accent)',
-              borderRadius:  '50% 50% 50% 0',
-              transform:     'rotate(-45deg)',
-              margin:        '0 auto 20px',
-            }} />
-            <div style={{
-              fontFamily:    "'Bebas Neue',sans-serif",
-              fontSize:      '18px',
-              letterSpacing: '3px',
-              color:         'var(--muted)',
-            }}>
-              ul. Poznańska 15, Pyskowice
-            </div>
-            <div style={{ fontSize:'13px', color:'rgba(240,240,240,.4)', marginTop:'6px' }}>
-              44-120 Pyskowice, Polska
-            </div>
-          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.4343517107864!2d18.612474277132836!3d50.41419287158529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471124384ebbe1ed%3A0xc417afe2c88e389b!2sLubotech!5e1!3m2!1spl!2spl!4v1775050910984!5m2!1spl!2spl"
+            width="100%"
+            height="420"
+            style={{ border: 0, display: 'block', filter: 'grayscale(1) invert(0.9) contrast(0.85)' }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Lubotech — ul. Poznańska 15, Pyskowice"
+          />
         </div>
       </section>
     </>
