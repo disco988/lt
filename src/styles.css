@@ -98,7 +98,7 @@
 
   /* Contact section */
   .contact-section  { padding: 80px 24px !important; }
-  .contact-grid     { grid-template-columns: 1fr !important; }
+  .contact-cards    { grid-template-columns: 1fr !important; }
 
   /* FAQ */
   .faq-section      { padding: 80px 24px !important; }
@@ -117,9 +117,6 @@
 
   /* ProjectsPage */
   .projects-grid    { grid-template-columns: 1fr 1fr !important; }
-
-  /* ContactPage */
-  .contact-page-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
 
   /* ServiceDetailPage */
   .detail-grid      { grid-template-columns: 1fr !important; }
